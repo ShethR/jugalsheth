@@ -24,10 +24,10 @@ description              : "Welcome to our website, where we embark on a journey
 url                      : "https://shethr.github.io/jugalsheth" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "ShethR/jugalsheth" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "./assets/images/robot.avif" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "./assets/images/IMG_1097.heic" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+teaser                   : "./assets/images/The-Impact-of-Large-Language-Models-and-Deep-Learning.jpeg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : "./assets/images/JS.jpeg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true #, false (default)
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -105,20 +105,23 @@ analytics:
 # Site Author
 author:
   name             : "Jugal Sheth"
-  avatar           : "/assets/images/IMG_1097.heic" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/IMG_1097.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I'm a machine learning engineer with a passion for teaching and simplifying complex concepts."
   location         : "New York, NY, USA"
-  email            :
+  # email            : "jugalsheth2001@gmail.com"
   links:
-    - label: "jugalsheth2001@gmail.com"
+    - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:jugalsheth2001@gmail.com"
-    - label: "https://shethr.github.io/jugalsheth/"
+    - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "https://shethr.github.io/jugalsheth/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/jugalsheth/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
@@ -252,22 +255,22 @@ whitelist:
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: liquid
+  type: jekyll-archives
   path: /categories/
 tag_archive:
-  type: liquid
+  type: jekyll-archives
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # HTML Compression
@@ -289,6 +292,20 @@ defaults:
       author_profile: true
       read_time: true
       show_date: true
-      comments: # true
+      comments: true
       share: true
       related: true
+
+    # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/

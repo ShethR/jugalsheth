@@ -1,0 +1,20 @@
+# Authors
+
+Jugal Sheth:
+  name        : "Jugal Sheth"
+  bio         : "I’m a machine learning engineer with a passion for teaching and simplifying complex concepts."
+  avatar      : "/assets/images/IMG_1097.jpg"
+  links:
+    - label: "jugalsheth2001@gmail.com"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:billyrick@rick.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://shethr.github.io/jugalsheth/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ShethR"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/jugalsheth/"
+
