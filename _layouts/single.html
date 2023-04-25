@@ -37,6 +37,7 @@ layout: default
         </header>
       {% endunless %}
 
+      {% if page.share %}{% include social-share.html %}{% endif %}
       <section class="page__content e-content" itemprop="text">
         {% if page.toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
@@ -60,7 +61,6 @@ layout: default
 
       {% if page.share %}{% include social-share.html %}{% endif %}
 
-      {% include post_pagination.html %}
     </div>
 
     {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
